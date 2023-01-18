@@ -7,11 +7,6 @@ Algoritmo problema1
 	
 FinAlgoritmo
 
-Algoritmo sin_titulo
-
-
-
-
 
 Algoritmo problema_2
 	//1.  Realiza un programa que sólo permita introducir los caracteres ?S? y ?N?. Si el usuario
