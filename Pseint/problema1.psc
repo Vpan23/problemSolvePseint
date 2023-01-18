@@ -8,25 +8,16 @@ Algoritmo problema1
 FinAlgoritmo
 
 Algoritmo sin_titulo
-//	    1.  Realiza un programa que sólo permita introducir los caracteres ?S? y ?N?. Si el usuario
-//				ingresa alguno de esos dos caracteres se deberá de imprimir un mensaje por pantalla
-//				que diga "CORRECTO", en caso contrario, se deberá imprimir "INCORRECTO".
-//		2. Realizar un programa que pida un número y determine si ese número es par o impar.
-//				Mostrar en pantalla un mensaje que indique si el número es par o impar. (para que un
-//				número sea par, se debe dividir entre dos y su resto debe ser igual a 0). Nota:
-//				investigar la función mod de PseInt.
-//		3. Realizar un programa que pida introducir solo frases o palabras de 6 caracteres. Si el
-//				usuario ingresa una frase o palabra de 6 caracteres se deberá de imprimir un mensaje
-//				por pantalla que diga "CORRECTO", en caso contrario, se deberá imprimir
-//				"INCORRECTO". Nota: investigar la función Longitud() de PseInt.
-//		4. Realizar un programa que pida una frase o palabra y si la frase o palabra es de 4
-//				caracteres de largo, el programa le concatenara un signo de exclamación al final, y si no
-//				es de 4 caracteres el programa le concatenara un signo de interrogación al final. El
-//				programa mostrará después la frase final. Nota: investigar la función Longitud() y
-//				Concatenar() de PseInt.
+
+
+
+
 
 Algoritmo problema_2
-	//1. 
+	//1.  Realiza un programa que sólo permita introducir los caracteres ?S? y ?N?. Si el usuario
+//		ingresa alguno de esos dos caracteres se deberá de imprimir un mensaje por pantalla
+//		que diga "CORRECTO", en caso contrario, se deberá imprimir "INCORRECTO".
+
 //	Definir S, N, text Como Caracter;
 //	Escribir "S & N:";
 //	Leer text;
@@ -37,7 +28,10 @@ Algoritmo problema_2
 //		Escribir "INCORRECTO";
 	//	FinSi
 	
-	//2. 
+//		2. Realizar un programa que pida un número y determine si ese número es par o impar.
+//			Mostrar en pantalla un mensaje que indique si el número es par o impar. (para que un
+//			número sea par, se debe dividir entre dos y su resto debe ser igual a 0). Nota:
+//			investigar la función mod de PseInt. 
 	
 //	Definir num Como Entero;
 //	
@@ -50,7 +44,10 @@ Algoritmo problema_2
 //		Escribir "El numero indicado es impar";
 //	FinSi
 	
-	//3. 
+//		3. Realizar un programa que pida introducir solo frases o palabras de 6 caracteres. Si el
+//			usuario ingresa una frase o palabra de 6 caracteres se deberá de imprimir un mensaje
+//			por pantalla que diga "CORRECTO", en caso contrario, se deberá imprimir
+//			"INCORRECTO". Nota: investigar la función Longitud() de PseInt.
 	
 //	Definir frase Como Caracter;
 //	Definir long Como Entero;
@@ -65,7 +62,11 @@ Algoritmo problema_2
 //		Escribir long;
 //	FinSi
 	
-	//4. 
+//		4. Realizar un programa que pida una frase o palabra y si la frase o palabra es de 4
+//			caracteres de largo, el programa le concatenara un signo de exclamación al final, y si no
+//			es de 4 caracteres el programa le concatenara un signo de interrogación al final. El
+//			programa mostrará después la frase final. Nota: investigar la función Longitud() y
+//			Concatenar() de PseInt.
 	
 //	Definir frase,text Como Caracter;
 //	Definir long Como Entero;
@@ -79,11 +80,6 @@ Algoritmo problema_2
 //	SiNo
 //		Escribir concatenar(frase,"?");
 //	FinSi
-	
-	//		5. Escriba un programa que pida 3 notas y valide si esas notas están entre 1 y 10. Si están
-	//				entre esos parámetros se debe poner en verdadero una variable de tipo lógico y si no
-	//				ponerla en falso. Al final el programa debe decir si las 3 notas son correctas usando la
-	//				variable de tipo lógico.
 	
 	
 FinAlgoritmo
