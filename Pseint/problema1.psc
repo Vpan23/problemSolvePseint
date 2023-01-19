@@ -79,3 +79,111 @@ Algoritmo problema_2
 	
 FinAlgoritmo
 
+Algoritmo problema_3
+//	1.  Construir un programa que simule un menú de opciones para realizar las cuatro
+//		operaciones aritméticas básicas (suma, resta, multiplicación y división) con dos valores
+//		numéricos enteros. El usuario, además, debe especificar la operación con el primer
+//	    carácter de la operación que desea realizar: ?S' o ?s? para la suma, ?R? o ?r? para la resta,
+//		?M? o ?m? para la multiplicación y ?D? o ?d? para la división.
+	
+//	Definir operacion, var1, var2 Como Real;
+//	Definir opc Como Entero;
+//	
+//	opc = 0
+//		Repetir
+//			Escribir "Calculadora de Operaciones aritmeticas basicas: ";
+//			Escribir "1 - Suma";
+//			Escribir "2 - Resta";
+//			Escribir "3 - Multiplicacion";
+//			Escribir "4 - Division";
+//			Escribir "5 - Salir";
+//			Escribir "Ingrese su Opcion:";
+//			Leer opc;
+//			Si opc > 0 Y opc < 5 Entonces
+//				Segun opc
+//					1: Escribir "Indique dos numeros a Sumar: ";
+//						Leer var1,var2;
+//						operacion = var1 + var2;
+//						Escribir "Respuesta: ", operacion;
+//					2: Escribir "Indique dos numeros a Restar: ";
+//						Leer var1,var2;
+//						operacion = var1 - var2;
+//						Escribir "Respuesta: ", operacion;
+//					3: Escribir "Indique dos numeros a Multiplicar: ";
+//						Leer var1,var2;
+//						operacion = var1 * var2;
+//						Escribir "Respuesta: ", operacion;
+//					4: Escribir "Indique dos numeros a Dividir: ";
+//						Leer var1,var2;
+//						operacion = var1 / var2;
+//						Escribir "Respuesta: ", operacion;
+//				FinSegun
+//				Escribir "";
+//				Escribir "";
+//				Escribir "";
+//			SiNo
+//				Escribir "";
+//				Escribir "";
+//				Escribir "Te has equivocado de Opcion vuelve a intentarlo!";
+//				Escribir "";
+//			FinSi
+//		
+//		Mientras Que opc <> 5
+	
+//	2.  Realizar un programa que, dado un número entero, visualice en pantalla si es par o
+//		impar. En caso de que el valor ingresado sea 0, se debe mostrar "el número no es par ni
+//		impar". Nota: investigar la función mod de PSeInt.
+	
+//	Definir num Como Entero;
+//	
+//	Escribir "Introduzca un numero: ";
+//	Leer num;
+//
+//	Si num Mod 2 == 0 Y num <> 0 Entonces
+//		Escribir "Es par";
+//		SiNo
+//			Si num == 0 Entonces
+//				Escribir "el número no es par ni impar";
+//			FinSi
+//			Si num Mod 2 <> 0 Entonces
+//				Escribir "Es impar";
+//		FinSi
+//	FinSi
+//		
+//	3. Escriba un programa para obtener el grado de eficiencia de un operario de una fábrica de
+//		tornillos, de acuerdo a las siguientes dos condiciones que se le imponen para un período
+//		de prueba:
+//		? Producir menos de 200 tornillos defectuosos.
+//		? Producir más de 10000 tornillos sin defectos.
+//		? El grado de eficiencia se determina de la siguiente manera:
+//		? Si no cumple ninguna de las condiciones, grado 5.
+//		? Si sólo cumple la primera condición, grado 6.
+//		? Si sólo cumple la segunda condición, grado 7.
+//		? Si cumple las dos condiciones, grado 8
+//	Nota: para trabajar este ejercicio de manera prolija, ir probando cada inciso
+//		  que pide el ejercicio. No hacer todos al mismo tiempo y después probar.
+	
+//	Definir efi, defi, grado Como Entero;
+//	
+//	Escribir "Indique el numero de tornillos Defectuosos: ";
+//	leer defi;
+//	Escribir "Indique el numero de tornillos Efectivos: ";
+//	leer efi;
+//	
+//	Si defi > 200 Y efi < 10000 Entonces
+//		grado = 5;
+//	SiNo
+//		Si defi < 200 Y efi < 10000 Entonces
+//			grado = 6;
+//		SiNo
+//			Si defi > 200 Y efi > 10000 Entonces
+//				grado = 7;
+//			SiNo
+//				Si defi < 200 Y efi > 10000 Entonces
+//					grado = 8;
+//				FinSi
+//			FinSi
+//		FinSi
+//	FinSi
+//	Escribir grado;
+FinAlgoritmo
