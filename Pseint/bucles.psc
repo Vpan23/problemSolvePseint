@@ -68,3 +68,21 @@ Algoritmo Deletrear
 	Escribir "  "
 FinAlgoritmo
 
+//4. Siguiendo el ejercicio 2 de los ejercicios principales, ahora deberemos hacer lo mismo
+//pero que la cadena se muestre al revés. Por ejemplo, si tenemos la cadena: Hola,
+//deberemos mostrar a l o H.
+
+Algoritmo tamanoa
+	Definir frase, letra, letra2 Como Caracter;
+	Definir tamano, posicion Como Entero
+	leer frase;
+	tamano = Longitud(frase);
+	Escribir "El tamano de la palabra es: ", tamano;
+	Escribir "Ahora vamos a deletrear: ";
+	para posicion <- tamano Hasta 0 Con Paso -1 Hacer
+		letra = Subcadena(frase,posicion,posicion);
+		Escribir Sin Saltar letra," ";
+		//posicion = posicion - 1
+	FinPara
+	Escribir " ";
+FinAlgoritmo
