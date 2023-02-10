@@ -15,8 +15,8 @@ Algoritmo encuentro18y19y20y21
 //	Escribir "";
 	
 	
-//	2. Realizar un programa que lea 10 números reales por teclado, los almacene en un arreglo y
-//	muestre por pantalla la suma, resta y multiplicación de todos los números ingresados al
+//	2. Realizar un programa que lea 10 nÃºmeros reales por teclado, los almacene en un arreglo y
+//	muestre por pantalla la suma, resta y multiplicaciÃ³n de todos los nÃºmeros ingresados al
 	//	arreglo.
 	
 //	Definir i,num, suma, resta, mult Como Real
@@ -35,12 +35,12 @@ Algoritmo encuentro18y19y20y21
 //	Escribir "Resta: ", resta;
 //	Escribir "mult: ", mult;
 	
-//	3. Realizar un programa que rellene un vector de tamaño N, con valores ingresados por el
-//	usuario. A continuación, se debe buscar un elemento dentro del arreglo (el número a buscar
-//	también debe ser ingresado por el usuario). El programa debe indicar la posición donde se
-//	encuentra el valor. En caso que el número se encuentre repetido dentro del arreglo se deben
+//	3. Realizar un programa que rellene un vector de tamaÃ±o N, con valores ingresados por el
+//	usuario. A continuaciÃ³n, se debe buscar un elemento dentro del arreglo (el nÃºmero a buscar
+//	tambiÃ©n debe ser ingresado por el usuario). El programa debe indicar la posiciÃ³n donde se
+//	encuentra el valor. En caso que el nÃºmero se encuentre repetido dentro del arreglo se deben
 //	imprimir todas las posiciones donde se encuentra ese valor.
-//	Finalmente, en caso que el número a buscar no está adentro del arreglo se debe mostrar un
+//	Finalmente, en caso que el nÃºmero a buscar no estÃ¡ adentro del arreglo se debe mostrar un
 	//mensaje.
 //	Definir n, num, i,j, num2 Como Entero;
 //	
@@ -61,20 +61,20 @@ Algoritmo encuentro18y19y20y21
 //		FinSi
 //	FinPara
 
-//	4. Realizar un programa con el siguiente menú y le pregunte al usuario que quiere hacer hasta
-//que ingrese la opción Salir:
-//	A. Llenar Vector A. Este vector es de tamaño N y se debe llenar de manera aleatoria
-//	usando la función Aleatorio(valorMin, valorMax) de PseInt.
-//	B. Llenar Vector B. Este vector también es de tamaño N y se llena de manera aleatoria.
+//	4. Realizar un programa con el siguiente menÃº y le pregunte al usuario que quiere hacer hasta
+//que ingrese la opciÃ³n Salir:
+//	A. Llenar Vector A. Este vector es de tamaÃ±o N y se debe llenar de manera aleatoria
+//	usando la funciÃ³n Aleatorio(valorMin, valorMax) de PseInt.
+//	B. Llenar Vector B. Este vector tambiÃ©n es de tamaÃ±o N y se llena de manera aleatoria.
 //	C. Llenar Vector C con la suma de los vectores A y B. La suma se debe realizar elemento
 //a elemento. Ejemplo: C = A + B
 //	D. Llenar Vector C con la resta de los vectores B y A. La resta se debe realizar elemento a
 //elemento. Ejemplo: C = B - A
-//E. Mostrar. Esta opción debe permitir al usuario decidir qué vector quiere mostrar: Vector
+//E. Mostrar. Esta opciÃ³n debe permitir al usuario decidir quÃ© vector quiere mostrar: Vector
 //	A, B, o C.
 //	F. Salir.
-//NOTA: El rango de los números aleatorios para los Vectores será de [-100 a 100]. La longitud
-//		para todos los vectores debe ser la misma, por lo tanto, esa información sólo se solicitará una
+//NOTA: El rango de los nÃºmeros aleatorios para los Vectores serÃ¡ de [-100 a 100]. La longitud
+//		para todos los vectores debe ser la misma, por lo tanto, esa informaciÃ³n sÃ³lo se solicitarÃ¡ una
 //		vez.
 	
 //	Definir opc, nada como caracter;
@@ -190,9 +190,9 @@ Algoritmo encuentro18y19y20y21
 	
 	
 	
-//5. Realizar un programa que rellene un vector de tamaño N, con valores ingresados por el
-//	usuario. A continuación, se deberá crear una función que reciba el vector y devuelva el valor
-//	más grande del vector.
+//5. Realizar un programa que rellene un vector de tamaÃ±o N, con valores ingresados por el
+//	usuario. A continuaciÃ³n, se deberÃ¡ crear una funciÃ³n que reciba el vector y devuelva el valor
+//	mÃ¡s grande del vector.
 //	Definir num, i, numMayor, n Como Entero
 //	Escribir "Ingrese una cantidad de numeros: ";
 //	Leer n;
@@ -208,19 +208,19 @@ Algoritmo encuentro18y19y20y21
 //	FinPara
 //	Escribir "El numero mayor es: ", numMayor;
 	
-//	6. Disponemos de un vector unidimensional de 20 elementos de tipo carácter. Se pide
+//	6. Disponemos de un vector unidimensional de 20 elementos de tipo carÃ¡cter. Se pide
 //desarrollar un programa que:
 //	a) Pida una frase al usuario y luego ingrese la frase dentro del arreglo letra por letra.
-//Ayuda: utilizar la función Subcadena de PSeInt.
-//	b) Una vez completado lo anterior, pedirle al usuario un carácter cualquiera y una
-//	posición dentro del arreglo, y el programa debe intentar ingresar el carácter en la
-//	posición indicada, si es que hay lugar (es decir la posición está vacía o es un espacio
-//	en blanco). De ser posible debe mostrar el vector con la frase y el carácter ingresado,
-//	de lo contrario debe darle un mensaje al usuario de que esa posición estaba ocupada.
-//Por ejemplo, suponiendo la siguiente frase y los subíndices del vector:
+//Ayuda: utilizar la funciÃ³n Subcadena de PSeInt.
+//	b) Una vez completado lo anterior, pedirle al usuario un carÃ¡cter cualquiera y una
+//	posiciÃ³n dentro del arreglo, y el programa debe intentar ingresar el carÃ¡cter en la
+//	posiciÃ³n indicada, si es que hay lugar (es decir la posiciÃ³n estÃ¡ vacÃ­a o es un espacio
+//	en blanco). De ser posible debe mostrar el vector con la frase y el carÃ¡cter ingresado,
+//	de lo contrario debe darle un mensaje al usuario de que esa posiciÃ³n estaba ocupada.
+//Por ejemplo, suponiendo la siguiente frase y los subÃ­ndices del vector:
 //	H o l a m u n d o c r u e l !
 //	0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
-//Si se desea ingresar el carácter "%" en la posición 10, entonces el resultado sería:
+//Si se desea ingresar el carÃ¡cter "%" en la posiciÃ³n 10, entonces el resultado serÃ­a:
 //		H o l a m u n d o % c r u e l !
 //		0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
 //	
@@ -252,10 +252,10 @@ Algoritmo encuentro18y19y20y21
 //	FinSi
 //	Escribir "";
 
-//	7. Crear un subproceso que rellene dos arreglos de tamaño n, con números aleatorios. Después,
-//		hacer una función que reciba los dos arreglos y diga si todos sus valores son iguales o no. La
-//				función debe devolver el resultado de está validación, para mostrar el mensaje en el
-//				algoritmo. Nota: recordar el uso de las variables de tipo lógico.
+//	7. Crear un subproceso que rellene dos arreglos de tamaÃ±o n, con nÃºmeros aleatorios. DespuÃ©s,
+//		hacer una funciÃ³n que reciba los dos arreglos y diga si todos sus valores son iguales o no. La
+//				funciÃ³n debe devolver el resultado de estÃ¡ validaciÃ³n, para mostrar el mensaje en el
+//				algoritmo. Nota: recordar el uso de las variables de tipo lÃ³gico.
 	
 //	Definir n Como Entero;
 //	Escribir "Ingrese un tamano n para los arreglos";
@@ -290,3 +290,42 @@ Algoritmo encuentro18y19y20y21
 //		FinSi
 //	FinPara
 //FinFuncion
+
+Proceso sin_titulo
+//	6. Crear una funciÃ³n que devuelva la diferencia que hay entre el valor mÃ¡s chico de un arreglo y
+	//	su valor mÃ¡s grande.
+//	Definir num, i, numMayor, resultado, numMenor, total Como Entero;
+//	numMayor = 0;
+//	numMenor = 100;
+//	Dimension num[10];
+//	para i = 0 Hasta 9 Hacer
+//		num[i] = Aleatorio(0,100);
+//		si num[i] > numMayor Entonces
+//			numMayor = num[i];
+//		FinSi
+//		num[i] = Aleatorio(0,100);
+//		si num[i] < numMenor Entonces
+//			numMenor = num[i];
+//		FinSi
+//	FinPara
+//	total = numMayor - numMenor
+//	
+	//	Escribir numMayor," - ",numMenor," = ",total;
+	
+//	7. Programe una funciÃ³n que calcule el producto de un arreglo de nÃºmeros enteros. Para esto
+//		imagine, por ejemplo, que para un vector V de tamaÃ±o 4, el producto de todos los valores es
+//			igual a (V[1]*V[2]*V[3]*V[4])
+	
+//	Definir vector, n, i, total Como Entero;
+//	total = 1;
+//	Escribir "Ingrese un numero: ";
+//	leer n;
+//	Dimension vector[n];
+//	para i = 1 Hasta n+1 Hacer
+//		total = total * i;
+//		Escribir Sin Saltar "(",i,")*";
+//	FinPara
+//	Escribir " = ", total;
+	
+FinProceso
+
