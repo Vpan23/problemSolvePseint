@@ -291,6 +291,78 @@ Algoritmo encuentro18y19y20y21
 //	FinPara
 //FinFuncion
 
+
+//5. Tomando en cuenta el ejercicio 6, mejore el mecanismo de inserción del carácter, facilitando
+//un potencial reordenamiento del vector. Digamos que se pide ingresar el carácter en la
+//posición X y la misma está ocupada, entonces de existir un espacio en cualquier posición X-n
+//o X+n, desplazar los caracteres hacia la izq o hacia la derecha para poder ingresar el carácter
+//	en cuestión en el lugar deseado. El procedimiento de reordenamiento debe ubicar el espacio
+//	más cercano.
+//Por ejemplo, suponiendo la siguiente frase y los subíndices del vector:
+//	H o l a m u n d o c r u e l !
+//	0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+//	
+//	Si se desea ingresar el carácter "%" en la posición 8, entonces el resultado con desplaza-
+//	miento sería:
+//		
+//		h o l a m u n % d o c r u e l !
+//		0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+//		
+//		Notar que el desplazamiento se hizo hacia la izquierda porque el espacio de la posición 10 es-
+//	taba más cerca de la posición 8 que el espacio de la posición 4. Nota: en caso del que el des-
+//		plazamiento sea a la izquierda y se requiera que se remueva la letra, se hará. Por ejemplo,
+//		
+//		para poner un "%" en la posición 6, haríamos un desplazamiento a la izquierda y borraríamos
+//la letra h
+//Algoritmo problema5
+//Definir vector, frase, indice, carac Como Caracter;
+//Definir i, long, posicion Como Entero;
+//Dimension vector[22];
+//Hacer
+//	Escribir "Ingrese una frase de menos de 20 caracteres!";
+//	leer frase;
+//	long = Longitud(frase);
+//Mientras Que long > 20;
+//para i = 0 Hasta 19 Hacer
+//	vector[i] = " ";
+//FinPara
+//para i = 0 Hasta long-1 Hacer
+//	indice = Subcadena(frase, i, i);
+//	vector[i] = indice;
+//	Escribir sin saltar "[",vector[i],"]";
+//FinPara
+//Escribir "";
+//
+//Escribir "Ingrese un caracter cualquiera: ";
+//Leer carac;
+//Escribir "Ingrese una posicion para agregar dicho numero: ";
+//leer posicion;
+//
+//si vector[posicion] == " " Entonces
+//	vector[posicion] = carac;
+//	para i = 0 Hasta 19 Hacer
+//		Escribir sin saltar "[",vector[i],"]";
+//	FinPara
+//SiNo
+//	si posicion >= 10 Entonces
+//		para i = 19 Hasta posicion con paso -1 Hacer
+//			vector[i+1] = vector[i];
+//		FinPara
+//		vector[posicion] = carac;
+//	SiNo
+//		para i = 0 Hasta posicion Con Paso 1 Hacer
+//			vector[i] = vector[i+1];
+//		FinPara
+//		vector[posicion-1] = carac;
+//	FinSi
+//	//vector[posicion] = carac;
+//	para i = 0 Hasta 19 Hacer
+//		Escribir sin saltar "[",vector[i],"]";
+//	FinPara
+//FinSi
+//Escribir "";
+
+
 Proceso sin_titulo
 //	6. Crear una función que devuelva la diferencia que hay entre el valor más chico de un arreglo y
 	//	su valor más grande.
