@@ -243,3 +243,170 @@
 //		Escribir "No es un cuadrado magico :c";
 //	FinSi
 //FinAlgoritmo
+
+//	 		#####################################			SEGUNDA PARTE			 ##############################################
+
+//1. Realizar un programa que rellene de números aleatorios una matriz a través de un
+//subprograma y generar otro subprograma que muestre por pantalla la matriz final.
+
+//Algoritmo problema1
+//	Definir matriz, n Como Entero;
+//	Dimension matriz[100,100];
+//	aleatorioMatriz(matriz, n);
+//	mostrarMatriz(matriz, n);
+//FinAlgoritmo
+//
+//SubProceso aleatorioMatriz(matriz Por Referencia, n Por Referencia)
+//	Definir i, j Como Entero;
+//	n = Aleatorio(2,5);
+//	Escribir "Su matriz sera creada de ",n," filas y columnas";
+//	para i = 1 Hasta n Hacer
+//		para j = 1 Hasta n Hacer
+//			matriz[i,j] = Aleatorio(1,9);
+// //			Escribir Sin Saltar "[",matriz[i,j],"] ";
+//		FinPara
+// //		Escribir "";
+//	FinPara
+//FinSubProceso
+//SubProceso mostrarMatriz(matriz, n)
+//	Definir j, i Como entero;
+//	para i = 1 Hasta n Hacer
+//		para j = 1 Hasta n Hacer
+//			Escribir Sin Saltar "[",matriz[i,j],"] ";
+//		FinPara
+//		Escribir "";
+//	FinPara
+//FinSubProceso
+
+
+//2. Crear una matriz de orden n * m (donde n y m son valores ingresados por el usuario), llenarla
+//con números aleatorios entre 1 y 100 y mostrar su traspuesta.
+//¿Qué es una Matriz Traspuesta?
+//La matriz traspuesta de una matriz A se denota por B y se obtiene cambiando sus filas por
+//columnas (o viceversa).
+//
+//Matriz A = ? Matriz B =
+//
+//Ejemplo: Obsérvese, por ejemplo, que la primera fila de la matriz A es (1,0,4). Esta fila es la
+//	primera columna de su matriz traspuesta.
+//Algoritmo problema2 
+//	Definir matriz, matrizTraspuesta, n, m, i ,j, num Como Entero;
+//	Escribir "Ingrese valor de m y n:";
+//	Leer m;
+//	Dimension matriz[m,m];
+//	Dimension matrizTraspuesta[m,m];
+//	para i = 1 Hasta m Hacer
+//		para j = 1 Hasta m Hacer
+//			num = Aleatorio(1, 99);
+//			matriz[i,j] = num;
+//			matrizTraspuesta[j,i] = num;
+//		FinPara
+//	FinPara
+//	Escribir "MATRIZ NORMAL: "
+//	para i = 1 Hasta m Hacer
+//		para j = 1 Hasta m Hacer
+//			Escribir Sin Saltar "[",matriz[i,j],"] "
+//		FinPara
+//		Escribir "";
+//	FinPara
+//	Escribir "MATRIZ TRASPUESTA: "
+//	para i = 1 Hasta m Hacer
+//		para j = 1 Hasta m Hacer
+//			Escribir Sin Saltar "[",matrizTraspuesta[i,j],"] "
+//		FinPara
+//		Escribir "";
+//	FinPara
+//FinAlgoritmo
+
+//3. Realizar un programa que cree una matriz de 5x15 y deberemos llenar la matriz de unos y
+//ceros. Llenando el marco o la delimitación externa de la matriz de unos y la parte interna de
+//ceros.
+//Por ejemplo, nuestro matriz final debería verse así:
+//	111111111111111
+//	100000000000001
+//	100000000000001
+//	100000000000001
+//	111111111111111
+
+//Algoritmo problema3 
+//	Definir matriz, i, j Como Entero;
+//	Dimension matriz[5,15];
+//	para i = 1 Hasta 5 Hacer
+//		Para j = 1 Hasta 15 Hacer
+//			matriz[1,j] = 1;
+//			matriz[i,1] = 1;
+//			matriz[i,15] = 1;	
+//			matriz[5,j] = 1;
+//		FinPara
+//	FinPara
+//	para i = 1 Hasta 5 Hacer
+//		Para j = 1 Hasta 15 Hacer
+//			Escribir Sin Saltar matriz[i,j]," ";
+//		FinPara
+//		Escribir "";
+//	FinPara
+//FinAlgoritmo
+
+
+//4. Realizar un programa que calcule la multiplicación de dos matrices de enteros de 3x3.
+//Inicialice las matrices para evitar el ingreso de datos por teclado.
+
+//Algoritmo problema4
+//	Definir matriz,matriz2 Como Entero;
+//	Dimension matriz[3,3];
+//	Dimension matriz2[3,3];
+//	aleatorioMatriz(matriz,matriz2);
+//FinAlgoritmo
+//
+//SubProceso aleatorioMatriz(matriz Por Referencia,matriz2 Por Referencia)
+//	Definir i, j Como Entero;
+//	para i = 1 Hasta 3 Hacer
+//		para j = 1 Hasta 3 Hacer
+//			matriz[i,j] = Aleatorio(1,9);
+//			matriz2[i,j] = Aleatorio(1,9);
+//			Escribir "Matriz #1   Matriz #2"
+//			Escribir "   [",matriz[i,j],"]    X    [",matriz2[i,j],"]     =    ",matriz[i,j]*matriz[i,j];
+//		FinPara
+//		//		Escribir "";
+//	FinPara
+//FinSubProceso
+
+
+//5. Crear una matriz que contenga 3 columnas y la cantidad filas que decida el usuario. Las dos
+//primeras columnas contendrán valores enteros ingresados por el usuario y en la 3 columna se
+//deberá almacenar el resultado de sumar el número de la primera y segunda columna. Mostrar
+//la matriz de la siguiente forma:
+//	3 + 5 = 8
+//	4 + 3 = 7
+//	1 + 4 = 5
+
+Algoritmo problema5
+	Definir matriz, num, vectorRespuesta Como Entero;
+	Escribir "Ingrese el numero de filas: ";
+	leer num;
+	Dimension matriz[3,num+1];
+	sumarMatriz(matriz,num);
+FinAlgoritmo
+
+SubProceso sumarMatriz(matriz Por Referencia, num)
+	Definir i, j Como Entero;
+	Definir num1, num2 Como Entero;
+	Escribir "Ingrese dos numeros:";
+	leer num1, num2;
+	para i = 1 Hasta num Hacer
+		para j = 1 Hasta 3 Hacer
+			matriz[i,j] = Aleatorio(1,9);
+			Escribir Sin Saltar matriz[i,j],""
+		FinPara
+		Escribir "";
+	FinPara	
+	matriz[1,1] = num1;
+	matriz[2,2] = num2;
+	//matriz[4,num+1] = 9;
+	para i = 1 Hasta num Hacer
+		para j = 1 Hasta 3 Hacer
+			Escribir "[",matriz[i,j],"] + [",matriz[i+1,j+1],"] = ", matriz[i+1,j+1]+matriz[i,j];
+		FinPara
+			//Escribir "";
+	FinPara
+FinSubProceso
