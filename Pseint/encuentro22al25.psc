@@ -410,3 +410,67 @@ SubProceso sumarMatriz(matriz Por Referencia, num)
 			//Escribir "";
 	FinPara
 FinSubProceso
+
+
+
+//Algoritmo problema7
+//	Definir  total_productos, masVendido, nombre, diaSemana como caracter;
+//	Definir cant, i, j,total_ventas, matriz Como Entero;
+//	Dimension matriz[7,8];
+//	Escribir "Ingrese el total de ventas por cada día de la semana: ";
+//	leer total_ventas;
+//	//	Escribir "Ingrese el total de ventas de cada producto a lo largo de la semana:";
+//	//	leer total_productos;
+//	//	Escribir "Ingrese el producto más vendido en cada semana: ";
+//	//	leer masVendido;
+//	//	Escribir "Ingrese el nombre, el día de la semana y la cantidad del producto más vendido: ";
+//	//	leer nombre,diaSemana,cant;
+//	buscarTotalVentas(total_ventas, matriz)
+//FinAlgoritmo
+//
+//SubProceso buscarTotalVentas(total_ventas, matriz)
+//	Definir i, j, num2, total_prod, suma, masVendido, mayorN como entero;
+//	definir c,f Como Entero;
+//	suma = 0;
+//	Dimension c[100], f[100], masVendido[100],mayorN[100];
+//	num2 = total_ventas;
+//	para i = 1 Hasta 5 hacer
+//		para j = 1 hasta 5 hacer
+//			matriz[i,j] = aleatorio(10,total_ventas);
+//			
+//			c[i] = c[i] + matriz[i,j];
+//			f[j] = f[j] + matriz[i,j];
+//			
+//			si matriz[i,j] > masVendido[i] Entonces
+//				masVendido[i] = matriz[i,j];
+//				mayorN[i] = j;
+//			FinSi
+//			//			Escribir sin saltar "[",matriz[i,j],"] ";
+//		FinPara
+//		//		Escribir ""
+//	FinPara
+//	// Maquetacion.
+//	
+//	Escribir "            Lunes  Martes Miércoles Jueves Viernes  Total producto";
+//	para i = 1 Hasta 5 hacer
+//		Escribir Sin Saltar "Producto ",i,": "
+//		para j = 1 hasta 5 hacer
+//			Escribir sin saltar "[ ",matriz[i,j]," ]  ";
+//		FinPara
+//		Escribir Sin Saltar "     ",c[i];
+//		Escribir ""
+//	FinPara
+//	Escribir Sin Saltar "Total sema: ";
+//	para i = 1 Hasta 5 Hacer
+//		Escribir Sin Saltar " [",f[i],"]  ";
+//		suma = suma + f[i];
+//	FinPara
+//	Escribir Sin Saltar "    ",suma;
+//	Escribir "";
+//	Escribir "Producto"
+//	Escribir Sin Saltar "mas vendido: ";
+//	para i = 1 Hasta 5 Hacer
+//		Escribir sin saltar "[ #",mayorN[i]," ]  "
+//	FinPara
+//	Escribir "";
+//FinSubProceso
