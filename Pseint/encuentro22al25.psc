@@ -474,3 +474,128 @@ FinSubProceso
 //	FinPara
 //	Escribir "";
 //FinSubProceso
+
+//8. Una distribuidora de Nescafé tiene 4 representantes que viajan por toda la Argentina
+//ofreciendo sus productos. Para tareas administrativas el país está dividido en cinco zonas:
+//		Norte, Sur, Este, Oeste y Centro. Mensualmente almacena sus datos y obtiene distintas
+//		estadísticas sobre el comportamiento de sus representantes en cada zona. Se desea hacer un
+//	programa que lea el monto de las ventas de los representantes en cada zona y calcule luego:
+//		a) el total de ventas de una zona introducida por teclado
+//		b) el total de ventas de un vendedor introducido por teclado en cada una de las zonas
+//		c) el total de ventas de todos los representantes.
+
+//Algoritmo problema8
+//	Definir opc Como Caracter;
+//	Definir norte,sur,este,oeste,centro,i Como Entero;
+//	Dimension norte[4],sur[4],este[4],oeste[4],centro[4];
+//	opc = " ";
+//	Escribir "se desea saber el monto de las ventas de cada representante: ";
+//	para i = 0 Hasta 3 Hacer
+//		Limpiar Pantalla
+//		Escribir "Representante #",i+1;
+//		Escribir Sin Saltar "Ingrese el monto mensual de Norte:"
+//		leer norte[i];
+//		Escribir Sin Saltar "Ingrese el monto mensual de Sur:"
+//		leer sur[i];
+//		Escribir Sin Saltar "Ingrese el monto mensual de Este:"
+//		leer este[i];
+//		Escribir Sin Saltar "Ingrese el monto mensual de Oeste:"
+//		leer oeste[i];
+//		Escribir Sin Saltar "Ingrese el monto mensual de Centro:"
+//		leer centro[i];
+//	FinPara
+//	Hacer
+//		Limpiar Pantalla
+//		Escribir "Ingrese para saber una de las siguientes opciones:";
+//		Escribir "a) el total de ventas de una zona introducida x tlc.";
+//		Escribir "b) el total de ventas de un vendedor introducido x tlc.";
+//		Escribir "c) el total de ventas de todos los representantes.";
+//		Escribir "d) salir";
+//		Escribir "Opcion: " Sin Saltar;
+//		leer opc;
+//		Segun opc Hacer
+//			caso "a": venta1(norte,sur,este,oeste,centro);
+//			caso "b": venta2(norte,sur,este,oeste,centro)
+//			caso "c": venta3(norte,sur,este,oeste,centro)
+//			caso "d": 
+//			De Otro Modo:
+//				Escribir "Opcion Incorrecta!";
+//		FinSegun
+//	Hasta Que opc = "d";
+//FinAlgoritmo
+//
+//SubProceso venta1(norte,sur,este,oeste,centro)
+//	Definir zona, i, total Como Entero;
+//	total = 0;
+//	Limpiar Pantalla
+//	Escribir "Ingrese una de las zonas para saber su total en ventas: ";
+//	Escribir "1. Norte";
+//	Escribir "2. Sur";
+//	Escribir "3. Este";
+//	Escribir "4. Oeste";
+//	Escribir "5. Centro";
+//	Escribir "Opcion: " Sin Saltar;
+//	leer zona;
+//	Segun zona Hacer
+//		caso 1: para i = 0 Hasta 3 Hacer
+//				total = total + norte[i];
+//				FinPara
+//				Escribir "El Total en ventas del lado Norte es de: $", total;
+//				leer zona;
+//		caso 2: para i = 0 Hasta 3 Hacer
+//				total = total + sur[i];
+//			FinPara
+//			Escribir "El Total en ventas del lado Sur es de: $", total;
+//			leer zona;
+//		caso 3: para i = 0 Hasta 3 Hacer
+//				total = total + este[i];
+//			FinPara
+//			Escribir "El Total en ventas del lado Este es de: $", total;
+//			leer zona;
+//		caso 4: para i = 0 Hasta 3 Hacer
+//				total = total + oeste[i];
+//			FinPara
+//			Escribir "El Total en ventas del lado Oeste es de: $", total;
+//			leer zona;
+//		caso 5: para i = 0 Hasta 3 Hacer
+//				total = total + centro[i];
+//			FinPara
+//			Escribir "El Total en ventas del lado Centro es de: $", total;
+//			leer zona;
+//		De Otro Modo:
+//			Escribir "Por favor vuelva a intentar...";
+//			leer zona;
+//	FinSegun
+//FinSubProceso
+//SubProceso venta2(norte,sur,este,oeste,centro)
+//	Definir i,rep, total Como Entero;
+//	total = 0;
+//	Escribir "Ingrese el vendedor para saber su venta mensual:";
+//	Escribir "1. Representante #1";
+//	Escribir "2. Representante #2";
+//	Escribir "3. Representante #3";
+//	Escribir "4. Representante #4";
+//	Escribir "Opcion: " Sin Saltar;
+//	leer rep;
+//	total = total + norte[rep-1];
+//	total = total + sur[rep-1];
+//	total = total + este[rep-1];
+//	total = total + oeste[rep-1];
+//	total = total + centro[rep-1];
+//	Escribir "El representante #", rep, " Obtuvo un total de: $", total, " en ventas";
+//	leer total;
+//FinSubProceso
+//SubProceso venta3(norte,sur,este,oeste,centro)
+//	Definir total, i Como Entero;
+//	total = 0;
+//	para i = 0 Hasta 3 Hacer
+//		total = total + norte[i];
+//		total = total + sur[i];
+//		total = total + este[i];
+//		total = total + oeste[i];
+//		total = total + centro[i];
+//	FinPara
+//	Escribir "Las ventas totales del mes fueron: $", total;
+//	leer total;
+//FinSubProceso
+
