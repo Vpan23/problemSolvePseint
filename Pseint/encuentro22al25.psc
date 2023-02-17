@@ -380,36 +380,38 @@
 //	4 + 3 = 7
 //	1 + 4 = 5
 
-Algoritmo problema5
-	Definir matriz, num, vectorRespuesta Como Entero;
-	Escribir "Ingrese el numero de filas: ";
-	leer num;
-	Dimension matriz[3,num+1];
-	sumarMatriz(matriz,num);
-FinAlgoritmo
-
-SubProceso sumarMatriz(matriz Por Referencia, num)
-	Definir i, j Como Entero;
-	Definir num1, num2 Como Entero;
-	Escribir "Ingrese dos numeros:";
-	leer num1, num2;
-	para i = 1 Hasta num Hacer
-		para j = 1 Hasta 3 Hacer
-			matriz[i,j] = Aleatorio(1,9);
-			Escribir Sin Saltar matriz[i,j],""
-		FinPara
-		Escribir "";
-	FinPara	
-	matriz[1,1] = num1;
-	matriz[2,2] = num2;
-	//matriz[4,num+1] = 9;
-	para i = 1 Hasta num Hacer
-		para j = 1 Hasta 3 Hacer
-			Escribir "[",matriz[i,j],"] + [",matriz[i+1,j+1],"] = ", matriz[i+1,j+1]+matriz[i,j];
-		FinPara
-			//Escribir "";
-	FinPara
-FinSubProceso
+//Algoritmo problema5
+//	Definir fila, i, num Como Entero;
+//	Escribir "Ingrese la cantidad de filas a tener: ";
+//	leer fila;
+//	Dimension matriz[fila,3];
+//	llenarMatriz(matriz, fila);
+//FinAlgoritmo
+//
+//SubProceso llenarMatriz(matriz, fila)
+//	Definir i, total como entero;
+//	Definir num1, num2 Como Entero;
+//	Escribir "Ingrese el primer num: ";
+//	leer num1;
+//	Escribir "Ingrese el segundo num: ";
+//	leer num2;
+//	
+//	para i = 1 Hasta fila Hacer
+//		para j =1 Hasta 2 Hacer
+//			matriz[i,j] = Aleatorio(0,9);
+//		FinPara
+//	FinPara
+//	matriz[1,1] = num1;
+//	matriz[1,2] = num2;
+//	para i = 1 Hasta fila Hacer
+//		total = 0;
+//		para j =1 Hasta 2 Hacer
+//			Escribir Sin Saltar "+ [",matriz[i,j],"] ";
+//			total = total + matriz[i,j];
+//		FinPara
+//		Escribir " = ",total;
+//	FinPara
+//FinSubProceso
 
 
 
