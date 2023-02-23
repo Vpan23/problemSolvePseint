@@ -1,124 +1,100 @@
-//	Se debe crear una matriz con las siguientes palabras como se muestra a continuaciÛn. Luego de
-//	eso debemos acomodar las palabras para que la primera letra ?R? de cada una quede en la
-//		posiciÛn 5, aline·ndose.
-
-
-//Algoritmo principal:
-Algoritmo ejercicioCooperativoGuia5
-	Definir tablero como Cadena;
-	//Caso Penultimo
-	Definir posicion Como entero;
-	Dimension posicion[9];
-	//
-	Definir i,j Como Entero;
-	i = 0;
-	j = 0;
-		Dimension tablero[9, 12];
-		inicializarMatriz(tablero,i,j);
-		//imprimirMatriz(tablero,i,j);
-		agregarPalabra(tablero,i,j);
-		//imprimirMatriz(tablero,i,j);
-		buscarR(tablero,i,j,posicion);
-		acomodarPalabra(tablero,i,j,posicion);
-		imprimirMatriz(tablero,i,j);
+//subprograma inicializarMatriz:
+//	Debe recibir como par√°metros la matriz a inicializar, la cantidad de filas y la cantidad de columnas.
+//	En primera instancia inicializaremos la matriz con un "*" (asterisco) en cada lugar para que la
+//		misma no est√© vac√≠a y no tengamos problemas.
+Algoritmo ejercicioCooperativoGuia4
+	Definir tablero,palabras como Cadena
+	Definir i, lon, a,b Como Entero
+	Dimension tablero[9, 12]
+	Dimension palabras[9], lon[9]
+	palabras[0]="vector"
+	palabras[1]="matriz"
+	palabras[2]="programa"
+	palabras[3]="subprograma"
+	palabras[4]="subproceso"
+	palabras[5]="variable"
+	palabras[6]="enrtero"
+	palabras[7]="prara"
+	palabras[8]="mrs"
+	inicializarMatriz(tablero, 9, 12)
+	Para i<-0 Hasta 8 Con Paso 1 Hacer
+		palabras[i] = Mayusculas(palabras[i]);
+		agregarPalabra(tablero,palabras[i], i)
+	Fin Para
+	Para i = 0 Hasta 8 Hacer
+		lon[i] = buscarR(tablero,i)	
+	FinPara
+	a=9
+	b=12
+	imprimirMatriz(tablero, 9, 12)
+	
+	acomodarPalabras(tablero, palabras, lon,a,b)
+	Escribir "";Escribir ""
+	
+	imprimirMatriz(tablero, 9, 12)
+	
 FinAlgoritmo
 
-SubProceso inicializarMatriz(tablero Por Referencia,i,j)
-	para i = 0 Hasta 8 Hacer
-		para j = 0 Hasta 11 Hacer
-			tablero[i, j] = "*";
-		FinPara
-	FinPara
+SubProceso inicializarMatriz(tablero,a,b)
+	Definir i,j Como Entero
+	Para i<-0 Hasta a-1 Con Paso 1 Hacer
+		Para j<-0 Hasta b-1 Con Paso 1 Hacer
+			tablero[i,j]="*"
+		Fin Para
+	Fin Para
 FinSubProceso
 
-SubProceso imprimirMatriz(tablero,i,j)
-	para i = 0 Hasta 8 Hacer
-		para j = 0 Hasta 11 Hacer
-			Escribir Sin Saltar "[ ",tablero[i, j]," ] ";
-		FinPara
-		Escribir "";
-	FinPara
+SubProceso imprimirMatriz(tablero,a,b)
+	Definir i,j Como Entero
+	Para i<-0 Hasta a-1 Con Paso 1 Hacer
+		Para j<-0 Hasta  b-1 Con Paso 1 Hacer
+			Escribir Sin Saltar "[ ", tablero[i,j]," ] "
+		Fin Para
+		Escribir " "
+	Fin Para
 FinSubProceso
 
-SubProceso agregarPalabra(tablero,i,j)
-	Definir fila, k Como Entero;
-	Definir palabra, letra Como Caracter;
+SubProceso agregarPalabra(tablero,palabra1, a)
+	Definir j Como Entero
+	Para j<-0 Hasta Longitud(palabra1)-1 Con Paso 1 Hacer
+		tablero[a,j]=Subcadena(palabra1,j,j)
+	Fin Para
 	
-	//SOLO PARA PRUEBAS
-	Definir prueba Como Caracter;
-	Dimension prueba[9];
-	prueba[0] = "VECTOR";
-	prueba[1] = "MATRIZ";
-	prueba[2] = "PROGRAMA";
-	prueba[3] = "SUBPROGRAMA";
-	prueba[4] = "SUBPROCESO";
-	prueba[5] = "VARIABLE";
-	prueba[6] = "ENTERO";
-	prueba[7] = "PARARA";
-	prueba[8] = "MIENTRAS";
-	
-	//ASIGNACION DE LA PALABRA EN SU CORRESPONDIDO LUGAR.
-	para i = 0 Hasta 8 Hacer
-//		Escribir "Ingrese la palabra que desea aÒadir:";
-		//		Leer palabra;
-		palabra = prueba[i];
-		
-			para j = 0 Hasta 11 Hacer
-				letra = Subcadena(palabra, j, j);
-				tablero[i, j] = letra;
-				si tablero[i, j] = "" Entonces
-					tablero[i, j] = " ";
-				FinSi
-			FinPara
-		FinPara
 FinSubProceso
 
-SubProceso buscarR(tablero,i,j,posicion Por Referencia)
-	Definir valid Como Logico;
-	valid = falso;
-	para i = 0 Hasta 8 Hacer
-		para j = 0 Hasta 11 Hacer
-				si tablero[i, j] == "R" y valid = falso Entonces
-					posicion[i] = j;
-					//Break; xd
-					valid = Verdadero;
-				FinSi
-			FinPara
-		//Escribir Sin Saltar posicion[i]," ";
-	FinPara
+SubProceso pos = buscarR(tablero,fila)
+	Definir i,j, x, pos Como Entero
+	x=0
+	Para j<-0 Hasta 11 Con Paso 1 Hacer
+		si x==0  Entonces
+			si tablero[fila,j]=="R" Entonces
+				pos=j
+				x=x+1
+			FinSi
+		FinSi
+	Fin Para
 FinSubProceso
 
-SubProceso acomodarPalabra(tablero,i,j,posicion) 
-	Definir tablero2 Como Caracter;
-	Definir resta como entero;
-	Dimension tablero2[9,12];
-	para i = 0 Hasta 8 Hacer		//TRASPASO DE DATOS DE UN TABLERO A OTRO.
-		para j = 0 Hasta 11 Hacer
-			tablero2[i,j] = tablero[i, j];
-		FinPara
-	FinPara
-	para i = 0 Hasta 8 Hacer
-		para j = 0 Hasta 11 Hacer
-			si posicion[i] <> 5 Entonces
-				resta = 5 - posicion[i];
-				si resta > 0 Entonces
-					para k = 0 Hasta resta-1 Hacer
-						tablero[i,j] = tablero[i,j+1]
-					FinPara
-				SiNo
-					para k = 8 Hasta resta+1 Hacer
-						tablero[i,j] = tablero[i,j-1]
-					FinPara
-				FinSi
-			FinSi
-		FinPara
-	FinPara
-	para i = 0 Hasta 8 Hacer
-		para j = 0 Hasta 11 Hacer
-			si tablero[i, j] = "" Entonces
-				tablero[i, j] = " ";
-			FinSi
-		FinPara
-	FinPara
+SubProceso acomodarPalabras(tablero, palabras, lon,a,b)
+	Definir i,j,x, k, aux, aux2 Como Entero
+	inicializarMatriz(tablero,a,b)
+	i=0
+	k=0
+	aux=0
+	aux2=0
+	Para i = 0 Hasta a-1 Hacer
+		x=0
+		Para j<-aux Hasta ((Longitud(palabras[i])+aux2)-1) Hacer
+			tablero[i,aux]=Subcadena(palabras[i],x,x)
+			x=x+1
+			aux=aux+1
+		Fin Para	
+			si k < a-1 Entonces
+				k=k+1
+				aux=lon[0]-lon[k]
+				aux2=aux
+			FinSi		
+	FinPara	
 FinSubProceso
+
 	
